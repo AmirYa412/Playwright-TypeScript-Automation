@@ -10,6 +10,7 @@ test.describe('Test Scheduler Home Page', () => {
         });
 
         test('Switch to infinite scroll page', async () => {
+            await schedulerHomePage.verifyHeaderTextContains('Basic example(</>View example source code)');
             await schedulerHomePage.switchToInfiniteScroll();
             await schedulerHomePage.verifyHeaderTextContains('Infinite scroll(</>View example source code)');
             await schedulerHomePage.verifyUrlContains('/infinitescroll');

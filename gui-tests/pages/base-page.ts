@@ -19,8 +19,8 @@ class BasePage {
         return this.page.locator(locator);
     }
 
-    async getHeaderText(selector: string) : Promise<string> {
-        return await this.page.textContent(selector);
+    public async getElementText(element: Locator) : Promise<string> {
+        return await element.textContent();
     }
 
     public async clickOnElement(element: Locator, useForce: boolean = false, timeout: number = 3000): Promise<void> {

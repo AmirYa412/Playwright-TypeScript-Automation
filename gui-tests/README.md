@@ -50,12 +50,13 @@ cp .env.template .env
 2. `Protocol` - The protocol of `GUI_BASE_URL`.
 
 ### Configuration Options
+You can change the default configuration options in the `playwright.config.ts` file.
 
 * Timeout for test execution is **30 seconds**.
 * Assertion's timeout is **5 seconds**.
 * Tests are running in **headless mode**.
 * Browser used is **Chrome Desktop**.
-
+* `use.trace` is set to `off`. can be enabled to `on` for debugging purposes.
 ---
 
 # Writing Tests
@@ -111,6 +112,7 @@ class SchedulerHomePage extends BasePage {
     }
 }
 ```
+---
 # Running Tests
 
 `Playwright` offers a variety of command options to run the tests.
@@ -124,7 +126,7 @@ class SchedulerHomePage extends BasePage {
 | `npx playwright test --workers=1	`                  | Control amount of workers for parallel execution. 1 worker means test run won’t run in parallel. |
 | `npx playwright test --headed`                      | Run in headed mode. In `playwright.config.ts` the option `fullyParallel` is set to `true`.       |
 
-
+---
 
 # Reporting
 

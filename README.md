@@ -4,7 +4,7 @@ This repository contains 2 test automation projects.
 * `api-tests` - API tests for a "Pet Store" open-source server.
 * `gui-tests` - GUI tests for a "Scheduler" web application.
 
-Projects has been tested and verified with `Node.JS 21.7.1` on `MacOS Sonoma 14.4`.
+Projects has been tested and verified with `Node.JS 21.7.1` on `MacOS Sonoma 14.4` and `Windows 11`.
 
 The projects are written in `TypeScript` and utilize `Playwright 1.42.1` test automation framework.
 
@@ -41,12 +41,24 @@ These are just few of many features `Playwright` offers. Refers to the [document
 4. Each project has its own `.env.template` file which contains the `BASE_URL` & `PROTOCOL` for each project.
 
    Rename it to `.env` to be able to run the tests for each project, or you can copy it to a new `.env` file in each project's root directory.
-
+   
     ```bash
     cp api-tests/.env.template api-tests/.env
     cp gui-tests/.env.template gui-tests/.env
     ```
+   For Windows Terminal, use the copy command:
+   ``` cmd
+   copy api-tests\.env.template api-tests\.env
+   copy gui-tests\.env.template gui-tests\.env
+   ```
+
 5. Run test commands in **#Usage** section.
+6. If you are getting `Error: browser.Type.launch: Executable does not exist at` when running `gui-tests`,
+
+   Run this command to manually install browsers binaries:
+   ```bash
+   npx playwright install
+   ```
 
 ---
 

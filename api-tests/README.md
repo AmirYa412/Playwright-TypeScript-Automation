@@ -117,5 +117,5 @@ expect(response.status).toBe(200);
 | `npx playwright test -g "Get existing pet by id"` | Run specific test containing the string in its title.                                            |
 | `npx playwright test --grep @smoke`               | Run `@smoke` tagged tests.                                                                       |
 | `npx playwright test --grep-invert @smoke`        | Skip `@smoke` tagged tests.                                                                      |
-| `npx playwright show-report`                      | Skip `@smoke` tagged tests.                                                                      |
+| `npx playwright show-report`                      | Show latest test run report.                                                                     |
 
