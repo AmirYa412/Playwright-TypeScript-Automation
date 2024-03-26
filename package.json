@@ -1,0 +1,31 @@
+{
+  "name": "Playwright-TypeScript-Automation",
+  "version": "1.0.0",
+  "description": "A test automation projects using Playwright.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AmirYa412/Playwright-TypeScript-Automation.git"
+  },
+  "keywords": [
+    "QA",
+    "Automation",
+    "Tests",
+    "GUI",
+    "API"
+  ],
+  "author": "Amir Yamin",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.29",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "fast-xml-parser": "^4.3.6",
+    "typescript": "^5.4.2"
+  },
+  "scripts": {
+    "test-gui": "cd gui-tests && npx playwright test gui-tests",
+    "test-api": "cd api-tests && npx playwright test api-tests",
+    "report": "npx playwright show-report"
+  }
+}
