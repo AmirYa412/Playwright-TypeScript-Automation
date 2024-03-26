@@ -48,7 +48,7 @@ test.describe('Tests GET request for API /pet/{id}', () => {
 
         test('Get pet by ID with Accept XML header - XML response data', {tag: '@smoke'}, async () => {
             try {
-                client.session.defaults.headers['Accept'] = 'application/xml';
+                client.updateSessionHeader('Accept', 'application/xml');
                 const validPetId = 5;
                 const response = await client.getPetById(validPetId);
                 expect(response.status).toBe(200);
@@ -60,8 +60,8 @@ test.describe('Tests GET request for API /pet/{id}', () => {
                 expect(responseData).toHaveProperty('id');
                 expect(responseData.id).toBe(validPetId);
             } finally {
-                // Resetting headers to default in case not running in parallel
-                client.session.defaults.headers['Accept'] = 'application/json';
+                // Resetting Accept header to default in case not running in parallel
+                client.updateSessionHeader('Accept', 'application/json');
             }
         });
 

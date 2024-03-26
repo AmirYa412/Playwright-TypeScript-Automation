@@ -17,6 +17,10 @@ class Client {
         });
     }
 
+    public updateSessionHeader(header: string, value: string) {
+        this.session.defaults.headers[header] = value;
+    }
+
     private getHeaders() {
         return {
             'Content-Type': 'application/json',

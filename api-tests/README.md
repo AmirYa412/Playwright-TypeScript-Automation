@@ -49,6 +49,7 @@ cp .env.template .env
 2. `Protocol` - The protocol of `API_BASE_URL`.
 
 ### Configuration Options
+You can change the default configuration options in the `playwright.config.ts` file.
 
 * Timeout for test execution is 10 seconds.
 * Assertion's timeout is 3 seconds.
