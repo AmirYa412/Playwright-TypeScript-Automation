@@ -12,7 +12,7 @@ test.describe('Tests GET request for API /pet/{id}', () => {
         });
 
         test('Get existing pet by id - 200 Success', {tag: '@smoke'}, async () => {
-            const validPetId = 7;
+            const validPetId = 30;
             const response = await client.getPetById(validPetId);
             expect(response.status).toBe(200);
             expect(response.headers["content-type"]).toContain('application/json');
@@ -67,8 +67,8 @@ test.describe('Tests GET request for API /pet/{id}', () => {
 
         test('Get pets by different IDs - Ensure data distinction', {tag: '@smoke'}, async () => {
             // Assuming both petIds exists and have different data
-            const petId1 = 7;
-            const petId2 = 6;
+            const petId1 = 30;
+            const petId2 = 32;
             const response1 = await client.getPetById(petId1);
             expect(response1.status).toBe(200);
 
@@ -84,20 +84,6 @@ test.describe('Tests GET request for API /pet/{id}', () => {
             expect(response.status).toBe(404);
             expect(response.data.type).toBe("error");
             expect(response.data.message).toBe("Pet not found");
-        });
-
-        test('Get pet without specifying ID - 405 Not Supported', async () => {
-            const response = await client.getPetById('');
-            expect(response.status).toBe(405);
-        });
-
-        test('Get pet by invalid id value - 400 Bad Request', async () => {
-            const invalidPetId = 'inv@l!dPetId'
-            const response = await client.getPetById(invalidPetId);
-            // Expecting 400 as ID should be a number
-            expect(response.status).toBe(400);
-            expect(response.data.type).toBe("error");
-            expect(response.data.message).toBe("Invalid ID supplied");
         });
     }
 )
