@@ -74,7 +74,7 @@ class InfiniteScrollPage extends BasePage {
     public async verifyDateLabelFormat(view: string): Promise<void> {
         const formatMap = {
             day: {year: 'numeric', month: 'short', day: 'numeric'},
-            month: {year: 'numeric', month: 'short'}
+            month: {year: 'numeric', month: 'long'}
         }
         const dateText = await this.dateLabel.textContent();
         const date = new Date(dateText);
