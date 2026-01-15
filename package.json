@@ -16,12 +16,12 @@
   "author": "Amir Yamin",
   "license": "ISC",
   "dependencies": {
-    "@playwright/test": "^1.42.1",
-    "@types/node": "^20.11.29",
-    "axios": "^1.6.8",
-    "dotenv": "^16.4.5",
-    "fast-xml-parser": "^4.3.6",
-    "typescript": "^5.4.2"
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.8",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "fast-xml-parser": "^5.3.3",
+    "typescript": "^5.9.3"
   },
   "scripts": {
     "test-gui": "cd gui-tests && npx playwright test gui-tests",

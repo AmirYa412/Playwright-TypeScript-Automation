@@ -4,9 +4,9 @@ This repository contains 2 test automation projects.
 * `api-tests` - API tests for a "Pet Store" open-source server.
 * `gui-tests` - GUI tests for a "Scheduler" web application.
 
-Projects has been tested and verified with `Node.JS 21.7.1` on `MacOS Sonoma 14.4` and `Windows 11`.
+Projects has been tested and verified with `Node.JS 24.13.0` on `MacOS Tahoe 26.1` and `Windows 11`.
 
-The projects are written in `TypeScript` and utilize `Playwright 1.42.1` test automation framework.
+The projects are written in `TypeScript` and utilize `Playwright 5.9.3` test automation framework.
 
 
 
