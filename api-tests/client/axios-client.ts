@@ -1,4 +1,6 @@
 import axios, {AxiosInstance, AxiosResponse} from 'axios';
+import * as https from "node:https";
+
 
 class Client {
     protected readonly session: AxiosInstance;
@@ -9,6 +11,7 @@ class Client {
         this.testedEnvBaseUrl = `${process.env.PROTOCOL}${process.env.API_BASE_URL}`;
         this.session = axios.create({
             baseURL: this.testedEnvBaseUrl,
+            httpsAgent: new https.Agent({rejectUnauthorized: false}),
             headers: this.getHeaders(),
             // Disable validation of status code
             validateStatus:  (): boolean => {
@@ -24,7 +27,7 @@ class Client {
     private getHeaders() {
         return {
             'Content-Type': 'application/json',
-            'User-Agent': 'Node.js/21.7.1 axios/1.6.8',
+            'User-Agent': 'Node.js/24.3.0 axios/1.13.2',
             'Accept': 'application/json',
         }
     }

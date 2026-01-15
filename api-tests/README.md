@@ -6,7 +6,7 @@ The Swagger "Petstore" is a sample API for a pet store, showcasing Swagger’s c
 It provides endpoints for managing pets, store orders, and user accounts, including operations like adding new pets, updating existing pets, placing orders, and managing user data.
 
 Project written in `TypeScript` and uses `Playwright` automation framework.
-It utilizes `axios 1.6.8` library for making API requests.
+It utilizes `axios 1.13.2` library for making API requests.
 
 ---
 
